@@ -1,0 +1,4 @@
+[console_scripts]
+secrets-manager = secrets_manager.cli:main
+secrets-manager-server = secrets_manager.server:main
+

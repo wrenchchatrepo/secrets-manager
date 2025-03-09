@@ -1,0 +1,14 @@
+Dockerfile
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+secrets_manager/__init__.py
+secrets_manager/cli.py
+secrets_manager/keychain.py
+secrets_manager/server.py
+secrets_manager.egg-info/PKG-INFO
+secrets_manager.egg-info/SOURCES.txt
+secrets_manager.egg-info/dependency_links.txt
+secrets_manager.egg-info/entry_points.txt
+secrets_manager.egg-info/top_level.txt

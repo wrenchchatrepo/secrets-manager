@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
-Name: mcp-credentials
+Name: secrets-manager
 Version: 0.1.0
-Summary: Secure Credential Management System for MCP servers
-Home-page: https://github.com/wrenchchatrepo/mcp-credentials
+Summary: Secure Credential Management System for macOS
+Home-page: https://github.com/wrenchchatrepo/secrets-manager
 Author: Dion Edge
 Author-email: dion@wrench.chat
 License: UNKNOWN
@@ -14,9 +14,9 @@ Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
-# MCP Credentials
+# Secrets Manager
 
-A secure credential management system for MCP servers. This package provides tools to securely store and retrieve credentials using the macOS Keychain.
+A secure credential management system for macOS. This package provides tools to securely store and retrieve credentials using the macOS Keychain.
 
 ## Features
 
@@ -29,8 +29,8 @@ A secure credential management system for MCP servers. This package provides too
 
 ```bash
 # Clone the repository
-git clone https://github.com/wrenchchatrepo/mcp-credentials.git
-cd mcp-credentials
+git clone https://github.com/wrenchchatrepo/secrets-manager.git
+cd secrets-manager
 
 # Install the package
 pip install -e .
@@ -41,26 +41,26 @@ pip install -e .
 ### List All Credentials
 
 ```bash
-mcp-credentials list
+secrets-manager list
 ```
 
 ### Store a Credential
 
 ```bash
-mcp-credentials store COMPANY_NAME
+secrets-manager store COMPANY_NAME
 # You will be prompted to enter the value
 ```
 
 Or specify the value directly:
 
 ```bash
-mcp-credentials store COMPANY_NAME --value "Example Company LLC"
+secrets-manager store COMPANY_NAME --value "Example Company LLC"
 ```
 
 ### Retrieve a Credential
 
 ```bash
-mcp-credentials get COMPANY_NAME
+secrets-manager get COMPANY_NAME
 ```
 
 ### Store Credentials from a File
@@ -75,7 +75,7 @@ COMPANY_EIN = "12-3456789"
 Then run:
 
 ```bash
-mcp-credentials store-file credentials.txt
+secrets-manager store-file credentials.txt
 ```
 
 ## API Server
@@ -85,20 +85,20 @@ The package includes a REST API server for managing credentials over HTTP.
 ### Starting the Server
 
 ```bash
-mcp-credentials-server --host localhost --port 8000
+secrets-manager-server --host localhost --port 8000
 ```
 
 The server generates a temporary API key if none is provided. To specify your own API key:
 
 ```bash
-mcp-credentials-server --api-key your-api-key
+secrets-manager-server --api-key your-api-key
 ```
 
 Or set it as an environment variable:
 
 ```bash
-export MCP_CREDENTIALS_API_KEY=your-api-key
-mcp-credentials-server
+export SECRETS_MANAGER_API_KEY=your-api-key
+secrets-manager-server
 ```
 
 ### API Endpoints
@@ -170,7 +170,7 @@ Response:
 ### Import the Library
 
 ```python
-from mcp_credentials import get_specific_detail, store_in_keychain, SERVICE_NAME
+from secrets_manager import get_specific_detail, store_in_keychain, SERVICE_NAME
 ```
 
 ### Retrieve a Credential
@@ -208,5 +208,5 @@ The following credential keys are available by default:
 
 ## Extending the System
 
-To add additional credential types, modify the `ORG_KEYS` list in `mcp_credentials/keychain.py`. 
+To add additional credential types, modify the `ORG_KEYS` list in `secrets_manager/keychain.py`. 
 
