@@ -192,4 +192,4 @@ The following credential keys are available by default:
 
 ## Extending the System
 
-To add additional credential types, modify the `ORG_KEYS` list in `secrets_manager/keychain.py`. 
+To add additional credential types, modify the `ORG_KEYS` list in `secrets_manager/keychain.py`.
