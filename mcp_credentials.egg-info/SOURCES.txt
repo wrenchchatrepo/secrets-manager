@@ -1,0 +1,14 @@
+Dockerfile
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+mcp_credentials/__init__.py
+mcp_credentials/cli.py
+mcp_credentials/keychain.py
+mcp_credentials/server.py
+mcp_credentials.egg-info/PKG-INFO
+mcp_credentials.egg-info/SOURCES.txt
+mcp_credentials.egg-info/dependency_links.txt
+mcp_credentials.egg-info/entry_points.txt
+mcp_credentials.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+[console_scripts]
+mcp-credentials = mcp_credentials.cli:main
+mcp-credentials-server = mcp_credentials.server:main
+
